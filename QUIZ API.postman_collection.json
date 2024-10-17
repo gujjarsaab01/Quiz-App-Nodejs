@@ -1,0 +1,115 @@
+{
+	"info": {
+		"_postman_id": "823b2a1b-0dc4-4308-a85f-63b4f2704da3",
+		"name": "QUIZ API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28626584",
+		"_collection_link": "https://www.postman.com/supply-cosmonaut-90849638/workspace/quiz-app/collection/28626584-823b2a1b-0dc4-4308-a85f-63b4f2704da3?action=share&source=collection_link&creator=28626584"
+	},
+	"item": [
+		{
+			"name": "Create Quiz",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"question\": \"What is 100 * 1? \",\r\n    \"options\": [\"3\", \"100\", \"4\", \"7\"],\r\n    \"rightAnswer\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/v1/quizzes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"quizzes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Quizzes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/v1/quizzes/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"quizzes",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Active Quiz",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/v1/quizzes/active",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"quizzes",
+						"active"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Quiz Result",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/v1/quizzes/6710ec7042caa10007d6f0fe/result",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"quizzes",
+						"6710ec7042caa10007d6f0fe",
+						"result"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
