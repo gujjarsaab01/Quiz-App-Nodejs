@@ -15,17 +15,15 @@ const QuizSchema = new mongoose.Schema(
     rightAnswer: {
       type: Number,
       required: [true, "Right answer index is required"],
-      validate: {
-        validator: Number.isInteger,
-        message: "Right answer must be an integer",
-      },
       min: 0,
     },
     startDate: {
       type: Date,
+      required: true,
     },
     endDate: {
       type: Date,
+      required: true,
     },
     status: {
       type: String,
@@ -36,6 +34,7 @@ const QuizSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
+//function to change status
 QuizSchema.methods.updateStatus = function () {
   const now = new Date();
   if (now < this.startDate) {

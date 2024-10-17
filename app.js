@@ -17,7 +17,6 @@ app.use(express.json()); // Body parser for JSON
 app.use(limiter); //  rate limiting
 
 //API routes
-// app.use("/api/v1/user", userRoutes);
 app.use("/api/v1", quizRoutes);
 
 //staring cron Jobs

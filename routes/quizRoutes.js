@@ -10,7 +10,7 @@ const router = express.Router();
 //POST method- Creating a new quiz
 router.post("/quizzes", createQuiz);
 
-//GET Method - Fetching all quizzes
+//GET method - Fetching all quizzes
 router.get("/quizzes/all", getAllQuizzes);
 
 //GET method- Retrieve  active quiz
