@@ -33,8 +33,8 @@ const updateQuizStatus = async () => {
 
 // Function to start cron jobs
 const startCronJobs = () => {
-  cron.schedule("* * * * *", async () => {
     // Runs every minute
+  cron.schedule("* * * * *", async () => {
     await updateQuizStatus();
   });
 };
